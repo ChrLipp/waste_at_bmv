@@ -1,0 +1,21 @@
+### Artifacts ###
+__pycache__
+.pytest*
+*.egg-info
+*/build/*
+*/dist/*
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### VS Code ###
+.vscode/
+
+### MacOS files ###
+.DS_Store
