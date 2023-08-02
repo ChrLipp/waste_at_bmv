@@ -1,7 +1,8 @@
-![hacs_badge](https://github.com/hacs/integration) 
-![downloads](https://img.shields.io/github/downloads//ChrLipp/waste_at_bmv/total.svg) 
-![](https://github.com/ChrLipp/waste_at_bmv/releases) 
-![](https://github.com/ChrLipp)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![downloads](https://img.shields.io/github/downloads/ChrLipp/waste_at_bmv/total.svg)](https://img.shields.io/github/downloads/ChrLipp/waste_at_bmv/total.svg)
+[![](https://img.shields.io/github/release/ChrLipp/waste_at_bmv/all.svg?style=for-the-badge)](https://github.com/ChrLipp/waste_at_bmv/releases)
+[![](https://img.shields.io/badge/MAINTAINER-%40ChrLipp-green)](https://github.com/ChrLipp)
+
 
 # HACS integration for BMV (Burgenländischer Müllverband)
 
