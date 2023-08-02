@@ -52,7 +52,11 @@ In your `configuration.yaml` define the following settings
         strasse: !secret bmv_strasse
         hausnummer: !secret bmv_hausnummer
 
-The content of the variables must be the same values as selected on https://www.bmv.at/service/muellabfuhrtermine.html . 
+The content of the variables must be the same values as selected on https://www.bmv.at/service/muellabfuhrtermine.html . After a reboot you should see the following sensors in the development tools:
+
+- `sensor.waste_gelber_sack``
+- `sensor.waste_papier``
+- `sensor.waste_restmull``
 
 For better readability I provided additional template sensors (I repeated the config above):
 
@@ -79,29 +83,29 @@ For better readability I provided additional template sensors (I repeated the co
 This allows you to display the info in `ui-lovelace.yaml`
 
     - type: entities
-    title: Abfalltermine
-    show_header_toggle: false
-    entities:
-    - entity: sensor.gelbersack_text
-    - entity: sensor.papiertonne_text
-    - entity: sensor.restmuell_text
+      title: Abfalltermine
+      show_header_toggle: false
+      entities:
+      - entity: sensor.gelbersack_text
+      - entity: sensor.papiertonne_text
+      - entity: sensor.restmuell_text
 
 Additionally I have three automations, one for each waste type to notify the family group on 19:00
 that tomorrow is a waste schedule:
 
     automation:
     - id: '1583509362749'
-    alias: 'Notify: Garbage (Gelber Sack)'
-    description: Telegram notification when garbage "Gelber Sack" is collected tomorrow
-    trigger:
-    - at: '19:00'
+      alias: 'Notify: Garbage (Gelber Sack)'
+      description: Telegram notification when garbage "Gelber Sack" is collected tomorrow
+      trigger:
+      - at: '19:00'
         platform: time
-    condition:
-    - condition: template
+      condition:
+      - condition: template
         value_template: "{{ state_attr('sensor.waste_gelber_sack', 'days') == 1 }}"
-    action:
-    - data:
-        message: "*Gelber Sack* rausbringen. Abholung *morgen* ( {{state_attr('sensor.waste_gelber_sack', 'display_date')}})"
+      action:
+      - data:
+          message: "*Gelber Sack* rausbringen. Abholung *morgen* ( {{state_attr('sensor.waste_gelber_sack', 'display_date')}})"
         service: notify.telegram_all
 
 ## Lessons learned

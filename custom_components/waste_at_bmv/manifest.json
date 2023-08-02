@@ -3,7 +3,7 @@
   "name": "Abfall Sensor Burgenländischer Müllverband (BMV)",
   "documentation": "https://github.com/ChrLipp/waste_at_bmv",
   "issue_tracker": "https://github.com/ChrLipp/waste_at_bmv/issues",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": [],
   "codeowners": ["@ChrLipp"],
   "requirements": []
