@@ -1,9 +1,10 @@
 {
   "domain": "waste_at_bmv",
   "name": "Abfall Sensor Burgenländischer Müllverband (BMV)",
-  "documentation": "https://github.com/ChrLipp/homeassistant",
-  "version": "1.0.1",
+  "documentation": "https://github.com/ChrLipp/waste_at_bmv",
+  "issue_tracker": "https://github.com/ChrLipp/waste_at_bmv/issues",
+  "version": "1.0.2",
   "dependencies": [],
-  "codeowners": [],
+  "codeowners": ["@ChrLipp"],
   "requirements": []
 }
