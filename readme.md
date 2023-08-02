@@ -1,6 +1,7 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/
-integration)
-[![downloads](https://img.shields.io/github/downloads/ChrLipp/waste_at_bmv/total.svg)](https://img.shields.io/github/downloads//ChrLipp/waste_at_bmv/total.svg)
+![hacs_badge](https://github.com/hacs/integration) 
+![downloads](https://img.shields.io/github/downloads//ChrLipp/waste_at_bmv/total.svg) 
+![](https://github.com/ChrLipp/waste_at_bmv/releases) 
+![](https://github.com/ChrLipp)
 
 # HACS integration for BMV (Burgenländischer Müllverband)
 
@@ -11,7 +12,7 @@ integration)
 Make sure the HACS component is installed and working.
 
 Add the project repository https://github.com/ChrLipp/waste_at_bmv as a custom repository to HACS
-(type is integration), see: https://hacs.xyz/docs/faq/custom_repositories
+(category is integration), see: https://hacs.xyz/docs/faq/custom_repositories
 
 ### 2. Manual
 
