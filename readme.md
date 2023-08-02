@@ -47,7 +47,7 @@ After a correct installation, your configuration directory should look like the 
 In your `configuration.yaml` define the following settings
 
     sensor:
-    - platform: waste_at_bmv
+      - platform: waste_at_bmv
         ort: !secret bmv_ort
         strasse: !secret bmv_strasse
         hausnummer: !secret bmv_hausnummer
@@ -61,21 +61,21 @@ The content of the variables must be the same values as selected on https://www.
 For better readability I provided additional template sensors (I repeated the config above):
 
     sensor:
-    - platform: waste_at_bmv
+      - platform: waste_at_bmv
         ort: !secret bmv_ort
         strasse: !secret bmv_strasse
         hausnummer: !secret bmv_hausnummer
-    - platform: template
+      - platform: template
         sensors:
-        gelbersack_text:
+          gelbersack_text:
             value_template: "{{state_attr('sensor.waste_gelber_sack', 'display_text')}}"
             friendly_name_template: "Gelber Sack - am {{state_attr('sensor.waste_gelber_sack', 'display_date')}}"
             icon_template: mdi:sack
-        papiertonne_text:
+          papiertonne_text:
             value_template: "{{state_attr('sensor.waste_papier', 'display_text')}}"
             friendly_name_template: "Papier - am {{state_attr('sensor.waste_papier', 'display_date')}}"
             icon_template: mdi:delete-empty
-        restmuell_text:
+          restmuell_text:
             value_template: "{{state_attr('sensor.waste_restmull', 'display_text')}}"
             friendly_name_template: "Restmüll - am {{state_attr('sensor.waste_restmull', 'display_date')}}"
             icon_template: mdi:trash-can-outline
