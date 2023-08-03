@@ -7,15 +7,16 @@
 
 ## What is it?
 
-This integration provides three sensors which will hold the next dates for the BMV waste schedule.
-This is the information provided on https://www.bmv.at/service/muellabfuhrtermine.html
-
 BMV stands for "Burgenländischer Müllverband". This means that this integration is only useful for you
 if you live in Burgenland!
 
+BMV provides the schedules on it's homepage: https://www.bmv.at/service/muellabfuhrtermine.html
+
+This integration scrapes the homepage and provides three sensors which will hold the next dates for the BMV waste schedule (the bold info on the homepage).
+
 ## Installation
 
-### 1. Easy Mode
+### 1. Automatically via HACS
 
 Make sure the HACS component is installed and working.
 
@@ -54,9 +55,9 @@ In your `configuration.yaml` define the following settings
 
 The content of the variables must be the same values as selected on https://www.bmv.at/service/muellabfuhrtermine.html . After a reboot you should see the following sensors in the development tools:
 
-- `sensor.waste_gelber_sack``
-- `sensor.waste_papier``
-- `sensor.waste_restmull``
+- `sensor.waste_gelber_sack`
+- `sensor.waste_papier`
+- `sensor.waste_restmull`
 
 For better readability I provided additional template sensors (I repeated the config above):
 
