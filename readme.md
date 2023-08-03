@@ -7,16 +7,15 @@
 
 ## What is it?
 
-BMV stands for "Burgenländischer Müllverband". This means that this integration is only useful for you
-if you live in Burgenland!
+BMV stands for "Burgenländischer Müllverband" (something like "Burgenland Waste Association"). This means that this integration is only useful for you if you live in Burgenland!
 
-BMV provides the schedules on it's homepage: https://www.bmv.at/service/muellabfuhrtermine.html
+BMV provides the waste pickup schedules on it's homepage: https://www.bmv.at/service/muellabfuhrtermine.html
 
-This integration scrapes the homepage and provides three sensors which will hold the next dates for the BMV waste schedule (the bold info on the homepage).
+This integration scrapes the homepage and provides three sensors which will hold the next dates for the BMV waste pickup schedule (the bold info on the homepage).
 
 ## Installation
 
-### 1. Automatically via HACS
+### 1. Via HACS (recommended)
 
 Make sure the HACS component is installed and working.
 
@@ -59,7 +58,7 @@ The content of the variables must be the same values as selected on https://www.
 - `sensor.waste_papier`
 - `sensor.waste_restmull`
 
-For better readability I provided additional template sensors (I repeated the config above):
+For better readability I added additional template sensors to my config (above config is repeated):
 
     sensor:
       - platform: waste_at_bmv
@@ -81,7 +80,7 @@ For better readability I provided additional template sensors (I repeated the co
             friendly_name_template: "Restmüll - am {{state_attr('sensor.waste_restmull', 'display_date')}}"
             icon_template: mdi:trash-can-outline
 
-This allows you to display the info in `ui-lovelace.yaml`
+This allows me to display the template sensors - config from  `ui-lovelace.yaml`:
 
     - type: entities
       title: Abfalltermine
@@ -91,8 +90,7 @@ This allows you to display the info in `ui-lovelace.yaml`
       - entity: sensor.papiertonne_text
       - entity: sensor.restmuell_text
 
-Additionally I have three automations, one for each waste type to notify the family group on 19:00
-that tomorrow is a waste schedule:
+Additionally I have three automations -  one automation for each waste type - to notify the family group on 19:00 that tomorrow is a waste pickup day:
 
     automation:
     - id: '1583509362749'
